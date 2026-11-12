@@ -13,8 +13,6 @@ ps aux
 ```
 **Purpose:** Displays currently running processes, including their PID, CPU and memory usage.
 
-ps-aux.png
-
 ### Command 2: Monitor System Processes
 
 ```bash
@@ -22,16 +20,12 @@ top
 ```
 **Purpose:** Displays real-time process activity and system resource utilization.
 
-top.png
-
 ### Command 3: Find a Specific Process
 
 ```bash
 pgrep -a systemd
 ```
 **Purpose:** Finds the PID and command line of matching processes.
-
-image-2.png
 
 ## 3. Service Checks
 
@@ -44,8 +38,6 @@ sudo systemctl status ssh --no-pager
 ```
 **Purpose:** Checks whether the ssh service is running or stopped.
 
-image-3.png
-
 ### Command 5: List Active Services
 
 ```bash
@@ -53,8 +45,6 @@ systemctl list-units --type=service --state=running
 ```
 
 **Purpose:** Displays currently running systemd services.
-
-image-4.png
 
 ## 4. Log Checks
 
@@ -66,8 +56,6 @@ sudo journalctl -u ssh -n 20 --no-pager
 
 **Purpose:** Displays the latest 20 log entries for SSH.
 
-image-5.png
-
 ### Command 7: Check Recent System Logs
 
 ```bash
@@ -75,8 +63,6 @@ sudo journalctl -n 30 --no-pager
 ```
 
 **Purpose:** Displays recent system journal messages.
-
-image-6.png
 
 ## 5. Mini Troubleshooting Exercise
 
@@ -87,14 +73,12 @@ Step 1: Check service status.
 ```bash
 sudo systemctl status docker
 ```
-image-7.png
 
 Step 2: Investigate service logs.
 
 ```bash
 sudo journalctl -u docker -n 50 --no-pager
 ```
-image-8.png
 
 Step 3: If the service is stopped and the cause is understood, attempt to start it.
 
@@ -107,7 +91,6 @@ Step 4: Verify the service.
 ```bash
 sudo systemctl status docker
 ```
-image-9.png
 
 **Troubleshooting Result:**
 
